@@ -35,22 +35,16 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
-		<!-- Spring Boot Starter GraphQL for GraphQL functionality -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-graphql</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>com.graphql-java</groupId>
-			<artifactId>graphql-java</artifactId>
-		</dependency>
+		<!-- Spring Boot Starter GraphQL for GraphQL functionality -->
 		<dependency>
 			<groupId>org.springframework.graphql</groupId>
 			<artifactId>spring-graphql-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
 		<!-- Spring Boot Starter Data JPA for database interaction -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

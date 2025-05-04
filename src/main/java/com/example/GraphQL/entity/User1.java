@@ -6,13 +6,13 @@ import java.util.List;
 
 @Entity
 @AllArgsConstructor
-@RequiredArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 public class User1 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    Long id;
 
     String firstName;
 
@@ -23,15 +23,7 @@ public class User1 {
     String password;
 
     String email;
-    @OneToMany(mappedBy = "user1")
-    List<Task> task;
 
 
-    public User1(Long id,String firstName, String lastName, String username, String password) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.username = username;
-        this.password = password;
-    }
 }
 

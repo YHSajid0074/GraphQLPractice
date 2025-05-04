@@ -3,12 +3,10 @@ package com.example.GraphQL.service;
 import com.example.GraphQL.entity.Task;
 import com.example.GraphQL.payload.request.TaskDto;
 import com.example.GraphQL.repository.TaskRepo;
-import jakarta.persistence.Entity;
 import lombok.Data;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @Data

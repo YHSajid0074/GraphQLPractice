@@ -27,7 +27,6 @@ public class UserService {
         User1 user1 =new User1();
         user1.setFirstName(userdto.firstName());
         user1.setLastName(userdto.lastName());
-        user1.setEmail(userdto.email());
         user1.setPassword(userdto.password());
         user1.setUsername(userdto.username());
 
@@ -51,7 +50,6 @@ public class UserService {
 
         existingUser1.setFirstName(userDto.firstName());
         existingUser1.setLastName(userDto.lastName());
-        existingUser1.setEmail(userDto.email());
         existingUser1.setPassword(userDto.password());
         existingUser1.setUsername(userDto.username());
 

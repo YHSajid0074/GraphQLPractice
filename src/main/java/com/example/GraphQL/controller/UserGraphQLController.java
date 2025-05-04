@@ -1,6 +1,8 @@
 package com.example.GraphQL.controller;
 import com.example.GraphQL.entity.User1;
+import com.example.GraphQL.payload.request.UserDto;
 import com.example.GraphQL.repository.UserRepo;
+import com.example.GraphQL.service.UserService;
 import org.springframework.graphql.data.method.annotation.*;
 import org.springframework.stereotype.Controller;
 
@@ -9,15 +11,15 @@ import java.util.List;
 @Controller
 public class UserGraphQLController {
 
-    private final UserRepo userRepository;
+    private final UserService userService;
 
-    public UserGraphQLController(UserRepo userRepository) {
-        this.userRepository = userRepository;
+    public UserGraphQLController(UserService userService) {
+        this.userService = userService;
     }
 
     @QueryMapping
     public List<User1> allUsers() {
-        return userRepository.findAll();
+        return userService.findall();
     }
 
     @MutationMapping
@@ -25,7 +27,8 @@ public class UserGraphQLController {
                          @Argument String lastName,
                          @Argument String username,
                          @Argument String password) {
-        return userRepository.save(new User1(null,firstName, lastName, username, password));
+        return userService.createUser(new UserDto( firstName,lastName, username, password));
     }
+
 }
 
